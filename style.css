@@ -1,0 +1,182 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; /* Choose a suitable font */
+    background-color: #101929; /* Your specified background color */
+    color: #fff; /* Light text for contrast */
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: rgba(16, 25, 41, 0.8); /* Slightly transparent header */
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure it stays on top */
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Keeps logo left, nav-links right */
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px; /* Limit width for larger screens */
+    margin: 0 auto; /* Center the nav */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    /* No changes needed here - flexbox handles right alignment */
+}
+
+.nav-links li {
+    margin-left: 2rem; /* Spacing between links - kept consistent */
+}
+.nav-links li:first-child{
+    margin-left: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block; /* Important for consistent padding on all sides */
+    padding: 0.5rem; /* Add padding around the link text */
+}
+
+.nav-links a:hover {
+    color: #ddd; /* Lighter color on hover */
+}
+
+/* Section Styles */
+.section {
+    padding: 4rem 2rem;
+    min-height: 50vh; /* Ensure sections take up some space */
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text in the home section */
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+#home h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ddd; /* Slightly muted color */
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #1a273f; /* Slightly lighter than background */
+    border-radius: 8px;
+    overflow: hidden; /* Clip image corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure images fill the space */
+    display: block;  /* Remove any extra spacing below image */
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: #eee;
+}
+
+.project-card p {
+    margin: 0 1rem 1rem 1rem;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.project-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: #3498db; /* Use a nice accent color */
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    margin: 0 1rem 1rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #2980b9; /* Darker on hover */
+}
+
+/* Contact Section */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-links a {
+    color: #fff;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: #3498db; /* Use the same accent color */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2); /* Dark, slightly transparent */
+}
+
+/* Media Queries (for responsiveness) */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home h2 {
+        font-size: 1.5rem;
+    }
+}
