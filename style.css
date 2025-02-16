@@ -6,28 +6,28 @@
 }
 
 body {
-    font-family: sans-serif; /* Choose a suitable font */
-    background-color: #101929; /* Your specified background color */
-    color: #fff; /* Light text for contrast */
+    font-family: sans-serif;
+    background-color: #101929;
+    color: #fff;
     line-height: 1.6;
 }
 
 /* Header and Navigation */
 header {
-    background-color: rgba(16, 25, 41, 0.8); /* Slightly transparent header */
+    background-color: rgba(16, 25, 41, 0.8);
     position: sticky;
     top: 0;
-    z-index: 100; /* Ensure it stays on top */
+    z-index: 100;
     width: 100%;
 }
 
 nav {
     display: flex;
-    justify-content: space-between; /* Keeps logo left, nav-links right */
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    max-width: 1200px; /* Limit width for larger screens */
-    margin: 0 auto; /* Center the nav */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -38,11 +38,10 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-    /* No changes needed here - flexbox handles right alignment */
 }
 
 .nav-links li {
-    margin-left: 2rem; /* Spacing between links - kept consistent */
+    margin-left: 2rem;
 }
 .nav-links li:first-child{
     margin-left: 0;
@@ -52,18 +51,18 @@ nav {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
-    display: block; /* Important for consistent padding on all sides */
-    padding: 0.5rem; /* Add padding around the link text */
+    display: block;
+    padding: 0.5rem;
 }
 
 .nav-links a:hover {
-    color: #ddd; /* Lighter color on hover */
+    color: #ddd;
 }
 
 /* Section Styles */
 .section {
     padding: 4rem 2rem;
-    min-height: 50vh; /* Ensure sections take up some space */
+    min-height: 25vh;
 }
 .container {
     max-width: 1200px;
@@ -75,7 +74,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center; /* Center text in the home section */
+    text-align: center;
 }
 
 #home h1 {
@@ -86,35 +85,35 @@ nav {
 #home h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #ddd; /* Slightly muted color */
+    color: #ddd;
 }
 
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .project-card {
-    background-color: #1a273f; /* Slightly lighter than background */
+    background-color: #1a273f;
     border-radius: 8px;
-    overflow: hidden; /* Clip image corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Lift on hover */
+    transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .project-card img {
     width: 100%;
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover; /* Ensure images fill the space */
-    display: block;  /* Remove any extra spacing below image */
+    height: 200px;
+    object-fit: cover;
+    display: block; 
 }
 
 .project-card h3 {
@@ -132,7 +131,7 @@ nav {
 .project-link {
     display: block;
     padding: 0.5rem 1rem;
-    background-color: #3498db; /* Use a nice accent color */
+    background-color: #3498db;
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -142,7 +141,7 @@ nav {
 }
 
 .project-link:hover {
-    background-color: #2980b9; /* Darker on hover */
+    background-color: #2980b9;
 }
 
 /* Contact Section */
@@ -160,14 +159,39 @@ nav {
 }
 
 .contact-links a:hover {
-    color: #3498db; /* Use the same accent color */
+    color: #3498db;
 }
+
+.roblox-link { /* Added class to the <a> tag */
+    position: relative;
+    display: inline-block; /* Or block if you want it on its own line */
+  }
+  
+  .roblox-icon {
+    height: 45px;
+    width: 45px;
+    display: block; /* Prevents small spacing issues */
+  }
+  
+  .roblox-icon-hover {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Adjust duration as needed */
+  }
+  
+  .roblox-link:hover .roblox-icon-hover {
+    opacity: 1;
+  }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.2); /* Dark, slightly transparent */
+    background-color: rgba(0, 0, 0, 0.2); 
 }
 
 /* Media Queries (for responsiveness) */
