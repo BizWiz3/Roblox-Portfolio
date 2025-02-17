@@ -88,6 +88,10 @@ nav {
     color: #ddd;
 }
 
+.portfolio-desc {
+    font-size: 1.3rem;
+}
+
 /* Projects Section */
 .projects-grid {
     display: grid;
